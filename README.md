@@ -8,7 +8,7 @@
     
 
 - **Security:**
-  - Only I'm able to manage this site(e.g., add, update and delete something).
+  - Only I'm able to manage this site (e.g., add, update and delete something).
 
 
 
