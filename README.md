@@ -4,11 +4,14 @@
  Developed a personal portfolio website to showcase professional experience, skills and projects.
 
 ## Features
-- Visitors can show my skillset, institution and contact details.
+- Visitors can sign up and log in to explore my site or visit as a guest without signing up or logging in.
+- Visitors can view my skill set, educational background and contact details.
+- Visitors can log out after visiting, whether they signed in.
+  
     
 
 - **Security:**
-  - Only I'm able to manage this site (e.g., add, update and delete something).
+  - Only I have access to manage the site (e.g., add, update, or delete content).
 
 
 
@@ -16,7 +19,7 @@
 
 - Language: Python
 - Backend: Django
-- Forntend: HTML, CSS
+- Frontend: HTML, CSS
 - Database: PostgreSQL
 
 ## Clone this project
