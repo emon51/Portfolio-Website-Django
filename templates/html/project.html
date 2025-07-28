@@ -1,0 +1,26 @@
+
+
+
+{% extends 'html/base.html' %}
+
+{% block title %} project {% endblock %}
+
+{% block content %} 
+
+<div class="about-me">
+    <h3> Projects </h3> <hr>
+    
+        <table> 
+            {% for project_name, source_code_url, live_url in projects %} 
+            <tr> 
+                <td> {{ forloop.counter }}. </td>
+                <td style="padding-right: 15px;"> <strong> {{ project_name }} </strong> </td>
+                <td style="padding-right: 15px;"> <a class="project-link" href={{ source_code_url }}> Source Code </a> </td>
+                <td> <a class="project-link" href={{ live_url }}> Demo/Live </a> </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+</div>
+
+{% endblock %}

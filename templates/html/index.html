@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> index </title>
+</head>
+<body style="background-color: gray;">
+    <div style="padding: 15px; background-color: aquamarine;"> 
+        <b> <i> Welcome! If you already have an account, please log in. Otherwise, kindly sign up or </i> </b>
+        <a href="{% url 'home' %}"> Visit as a guest </a> <br> 
+
+        <div style="padding: 15px;"> 
+            <button> <a href="{% url 'signup' %}"> Signup </a> </button>
+            <button> <a href="{% url 'login' %}"> Login </a> </button>
+        </div>
+
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+   
+    
+</body>
+</html>

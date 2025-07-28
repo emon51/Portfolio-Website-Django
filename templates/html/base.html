@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'base.css' %}" />
+    <title> {% block title %} home {% endblock %} </title>
+</head>
+
+
+<body>
+    <div class="main-div"> 
+        <div class="left-div""> 
+            <center>
+                <img class = 'profile-pic' src="{% static 'eemon.jpg' %}" alt="image" /> <hr>
+
+                <div class="button"> <a href="{% url 'home' %}"> Home </a> </div>
+                <div class="button"> <a href="{% url 'about' %}" > About  </a> </div>
+                <div class="button"> <a href="{% url 'skill' %}"> Skills </a>  </div>
+                <div class="button"> <a href="{% url 'education' %}"> Education </a>  </div> 
+                <div class="button"> <a href="{% url 'project' %}"> Projects </a>  </div> 
+                <div class="button"> <a href="{% url 'contact' %}"> Contact </a>  </div> <br> <br>
+                
+                {% if user.is_authenticated %}
+        
+                <div class="logout"> 
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit"> Logout </button>
+                    </form>
+                </div>
+                 
+                <br>
+
+                {% endif %} 
+
+                <br>
+
+                <div class="button"> <a href="{% url 'index' %}"> Back </a>  </div> <br> <br>
+
+
+
+
+            </center>
+        </div>
+
+        <div class="right-div"> 
+            <center>
+                <h1 class="greeting"> Welcome </h1>
+            </center>
+             
+            {% block content %}
+    
+            {% endblock %}
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>

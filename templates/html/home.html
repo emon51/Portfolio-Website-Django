@@ -1,0 +1,32 @@
+
+
+{% extends 'html/base.html' %}
+
+{% block content %}
+<div class="home">
+    <div class="home-text">
+        <p> <h3> Hello, It's Me </h3> </p>
+        <p> <h1> {{ objects.name | upper }} </h1> </p>
+        <p> <h4> And I'm a {{ objects.profession }} </h4> </p> <br>
+    </div>
+     
+    <div class="social-link"> <a href="https://www.linkedin.com/in/emon51/" > Linkedin  </a> </div>
+    <div class="social-link"> <a href="https://www.facebook.com/emon51" > Facebook  </a> </div>
+    <div class="social-link"> <a href="https://github.com/emon51" > Github  </a> </div>
+
+    
+</div>
+
+<div>
+    {%if user.is_authenticated and user.username == 'emon51' %}
+        {% if not objects %}
+            <a class="add-update-button" href="{% url 'add-data' %}"> Add Data </a>
+        {% else %} 
+            <a class="add-update-button" href="{% url 'update-data' %}"> Update Data </a> <br> <br>
+            <a class="add-update-button" href="{% url 'delete-all-data' %}"> Delete All Data </a> 
+        {% endif %}
+    {% endif %}
+</div>
+
+
+{% endblock %}

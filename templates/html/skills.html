@@ -1,0 +1,52 @@
+
+
+{% extends 'html/base.html' %}
+
+{% block title %} skills {% endblock %}
+
+
+{% block content %} 
+
+<div class="skills">
+    <h3> Technical Skills </h3> <hr>
+    <p>
+        I have solved <b> {{ objects.number_of_solved_problem }} </b> problems based on Data Structures, Algorithms and Databases on different online judges.
+
+    </p>
+    <ul>
+        <li>
+            <a id='skill-a-tag' href="https://leetcode.com/emon51/"> Leetcode </a> 
+        </li>
+        <li>
+            <a id='skill-a-tag' href="https://auth.geeksforgeeks.org/user/emanur11235"> GeeksForGeeks </a>
+        </li>
+        <li>
+            <a id='skill-a-tag' href="https://www.naukri.com/code360/profile/emonhasan"> Coding Ninjas </a>
+        </li>
+        <li>
+            <a id='skill-a-tag' href="https://www.hackerrank.com/profile/emanur11235"> Hackerrank </a>
+        </li>
+    </ul>
+
+  <table>
+    <tr>
+        <td style="padding-bottom: 10px;"> <b> Languages: </b> </td>
+        <td >{{ objects.languages }} </td>
+    </tr>
+    <tr>
+        <td style="padding-bottom: 10px;"> <b> Databases: </b> </td>
+        <td> {{ objects.dbms }} </td>
+    </tr>
+    <tr>
+        <td style="padding-bottom: 10px;"> <b>Softwares: </b> </td>
+        <td> {{ objects.softwares }} </td>
+    </tr>
+    <tr>
+        <td> <b>Others: </b> </td>
+        <td> {{ objects.others }} </td>
+    </tr>
+</table>
+
+</div>
+               
+{% endblock %}

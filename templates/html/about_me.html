@@ -1,0 +1,17 @@
+
+{% extends 'html/base.html' %}
+
+{% block content %} 
+
+<div class="about-me">
+    <h3> About Me </h3> <hr>
+    <strong class="about-me-text"> 
+        This is {{ objects.name | upper }}, I have completed my graduation in Statistics from 
+        <em id='about-me-varsity'> Shahjalal University of Science and Technology (SUST), Sylhet, Bangladesh. </em>
+        I have a strong passion for programming and problem-solving. I am deeply interested in web development with a special 
+        focus on backend development, AI engineering and software engineering. I also enjoy playing cricket, doing physical 
+        exercise and spending time with friends.
+    </strong>
+</div>
+
+{% endblock %}

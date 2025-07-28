@@ -1,0 +1,21 @@
+
+{% extends 'html/base.html' %}
+
+{% block title %} add-data {% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+
+    <b> Add Personal Information </b>
+    {{ about_form.as_p }}
+
+    <b> Add Skills </b>
+    {{ skill_form.as_p }}
+    <button type="submit"> Save </button>
+</form>
+
+<a href="{% url 'home' %}"> Back </a>
+
+
+{% endblock %}

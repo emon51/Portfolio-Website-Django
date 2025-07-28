@@ -1,0 +1,17 @@
+
+
+
+{% extends 'html/base.html' %}
+
+{% block title %} contact {% endblock %}
+
+{% block content %} 
+
+<div class="contact"> 
+    <h2> Contact Me</h2> <hr>
+    <i class="contact-title"> Email :  </i> <a class='contact-a-tag' href="mailto: {{ objects.email }}"> {{ objects.email }} </a>
+    <br> <br>
+    <i class="contact-title"> Phone:  </i> <a class='contact-a-tag' href="tel: {{ objects.phone }}"> {{ objects.phone }} </a>
+</div>
+
+{% endblock %}
