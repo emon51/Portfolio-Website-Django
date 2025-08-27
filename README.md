@@ -22,12 +22,53 @@
 - Frontend: HTML, CSS
 - Database: SQLite3
 
-## Clone this project
-   ```
-   git clone https://github.com/emon51/Portfolio-Website-Django.git
-   ```
 
 ## Demo
 ```
 https://youtu.be/dSKjXj3iz5w
+```
+
+# Installation & Setup
+
+## Clone this project
+   ```
+    git clone https://github.com/emon51/Portfolio-Website-Django.git
+   ```
+
+## Create a virtual environment
+```
+python -m venv myenv
+```
+
+## Activate virtual environment (For Windows)
+```
+"myenv\Scripts\activate"
+```
+
+## Change the directory
+```
+cd Portfolio-Website-Django
+```
+
+## Install dependencies
+```
+pip install -r requirements.txt
+```
+
+## Migrate database
+```
+python manage.py migrate
+
+```
+
+## Run the development server
+```
+python manage.py runserver
+
+```
+
+## Open in browser
+```
+http://127.0.0.1:8000/
+
 ```
